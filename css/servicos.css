@@ -29,3 +29,47 @@
   font-size: var(--font-size-m);
   color: var(--cor-primaria-light);
 }
+
+.link::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  bottom: 50%;
+  width: 35px;
+  height: 35px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scale(0);
+  transition: transform 0.3s ease, left 0.3 ease;
+}
+
+.banho-e-tosa > .link::before {
+  background-image: url("../assets/icones/banho-e-tosa.png");
+}
+
+.hospedagem > .link::before {
+  background-image: url("../assets/icones/hospedagem.png");
+}
+
+.veterinario > .link::before {
+  background-image: url("../assets/icones/veterinario.png");
+}
+
+.adestramento > .link::before {
+  background-image: url("../assets/icones/adestramento.png");
+}
+
+.petsiter > .link::before {
+  background-image: url("../assets/icones/petsiter.png");
+}
+
+.servicos-lista > li > .link:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in;
+  padding-left: var(--padding-xxl);
+}
+
+.link:hover::before {
+  transform: scale(1) translateY(50%);
+  left: 0.5rem;
+}
