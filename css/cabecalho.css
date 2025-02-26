@@ -8,9 +8,15 @@
 
 .alinhamento-cabecalho {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding-top: var(--padding-l);
+}
+
+.alinhamento-cabecalho-flex {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .label-busca {
@@ -60,6 +66,10 @@
   align-items: center;
   justify-content: space-between;
   margin: 1rem 0;
+
+  @media (max-width: 700px) {
+    display: none;
+  }
 }
 
 .menu-link {
@@ -83,4 +93,29 @@
 .menu-link:hover::after,
 .menu-link:focus::after {
   width: 100%;
+}
+
+.alinhamento-cabecalho {
+  @media screen and (max-width: 400px) {
+    flex-wrap: wrap;
+    flex: 1 1 200px;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .alinhamento-cabecalho-flex {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 24px;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .botao-login {
+    display: flex;
+    flex: 1;
+    justify-content: end;
+  }
 }

@@ -2,6 +2,10 @@
 @import url("./css/destaque.css");
 @import url("./css/servicos.css");
 @import url("./css/planos.css");
+@import url("./css/ofertas.css");
+@import url("./css/parceiros.css");
+@import url("./css/newsletter.css");
+@import url("./css/rodape.css");
 
 :root {
   /* Cores */
@@ -16,6 +20,9 @@
   --cor-neutra-dark: #444444;
   --cor-neutra-medio: #b9b9b9;
   --cor-neutra-light: #ffffff;
+
+  --cor-primaria-box-shadow: rgba(193, 55, 6, 0.4);
+  --cor-secundaria-box-shadow: rgba(162, 183, 43, 0.4);
 
   /* Tipografia */
   --font-sigmar: "Sigmar", sans-serif;
@@ -94,4 +101,20 @@ body {
 
 .container {
   width: 75rem;
+
+  @media (max-width: 1200px) {
+    width: 55rem;
+  }
+
+  @media (max-width: 930px) {
+    width: 40.5rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 40.5rem;
+  }
+
+  @media (max-width: 700px) {
+    width: 19.5rem;
+  }
 }
